@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'ce7fffbe-605f-4a7a-9211-1c69edfe5476'
-  imageRepository: 'tonyphamapinodecosmos'
+  imageRepository: 'restapinodets'
   containerRegistry: 'myrestapinodets.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -35,4 +35,4 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
-        tags: 'v1'
+        tags: 'latest'
