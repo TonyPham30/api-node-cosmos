@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 dotenv.config()
 import { serverUrl } from './enviroment.config'
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const connectTodb = async () => {
   try {
     const connect = await mongoose.connect(serverUrl, () => {

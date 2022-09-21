@@ -11,6 +11,7 @@ class CreateTodo {
         return res.status(400).json({
           message: 'title or body is required'
         })
+      // eslint-disable-next-line sort-keys
       const todo = new TodoModel({ title, body })
       const newTodo = await todo.save()
       return returnSuccess(res, newTodo)
@@ -68,6 +69,7 @@ class CreateTodo {
         {
           _id: id
         },
+        // eslint-disable-next-line sort-keys
         { title: title, body: body }
       )
       return returnSuccess(res, todo)
