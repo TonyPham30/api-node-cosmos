@@ -1,9 +1,12 @@
 import { Response } from 'express'
+import { Types } from 'mongoose'
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const returnSuccess = (
   res: Response,
-  data: any,
+  data: unknown,
   success = 'server success'
 ) => {
-  return res.status(200).json({ success: true, message: `${success}`, data })
+  // eslint-disable-next-line sort-keys
+  return res.status(200).json({ success: true, data, message: `${success}` })
 }
