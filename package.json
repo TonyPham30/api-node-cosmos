@@ -10,7 +10,7 @@
     "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
     "start:dev": "nodemon",
     "start": "npm run build && node build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"oke\" && exit 1",
     "int-test": "mocha --require babel-core/register --recursive test"
   },
   "keywords": [],
